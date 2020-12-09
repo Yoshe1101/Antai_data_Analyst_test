@@ -19,8 +19,8 @@ https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_python_
 
 Case 1 - Classification  
 
-https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_python_Skills/Case_1_Classification_v1.ipynb (jupiter notebook)
+https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_python_Skills/Case_1_Classification_v1.ipynb (jupyter notebook)
 
 Case 2- Regresssion 
 
-https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_python_Skills/Case_2_Regression_V1.ipynb (jupiter notebook)
+https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_python_Skills/Case_2_Regression_V1.ipynb (jupyter notebook)
