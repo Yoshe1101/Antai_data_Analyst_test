@@ -2,16 +2,16 @@
 
 ### The answers of the Test are on the .md files in the correspondent folder of this respository, you also can find the code used to find the answers in the same folders. 
 
-### Links to the to the folder (in this repository)
+### Links (in this repository)
 
-#### General_SQL_Skills 
+#### -- General_SQL_Skills --
 
 https://github.com/Yoshe1101/Antai_data_Analyst_test/tree/master/General_SQL_Skills (Folder)
 
 https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/Answers_General_SQL_Skills.md (Answers)
 
 
-#### General_python_Skills 
+#### -- General_python_Skills --
 
 https://github.com/Yoshe1101/Antai_data_Analyst_test/tree/master/General_python_Skills (Folder)
 
