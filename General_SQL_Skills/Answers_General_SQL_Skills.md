@@ -19,11 +19,13 @@ If we wanna group the amounts by months first we would need to get from the colu
            SUM(total_amount) as Other_total
            FROM sales WHERE (product_name != 'Iphone Xs') AND (product_name != 'Ipad pro') 
            GROUP BY month;
+           
+![Ipad_pro](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/1.png) ![Iphone_Xs_total](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/2.png) ![Other_total](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/3.png)
 
 To get the table B from this queries we can perform a left join function and replacing the 'null' values by 0 <br/> (Note: in the next steps we show how to create this TABLE B from TABLE A more efficiently with one statement)
 
     select A.month, COALESCE (C.Ipad_pro_total, 0 ) AS Ipad_pro_total,
-           COALESCE (B.Iphone_Xs_total, 0 ) AS Iphone_Xs_total , 
+           COALESCE (B.Iphone_Xs_total, 0 ) AS Iphone_xs_total , 
            A.Other_total  
            from (SELECT strftime('%m', order_date) AS month , 
                                                    SUM(total_amount) as Other_total  
@@ -36,6 +38,8 @@ To get the table B from this queries we can perform a left join function and rep
            left join (SELECT strftime('%m', order_date) AS month , 
                                                         SUM(total_amount) as Ipad_pro_total  
                                                         FROM sales WHERE product_name == 'Ipad pro' ORDER BY month) AS C on C.month = A.month
+
+![Table_B_JOIN](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/4.png)
 
 
 
@@ -54,11 +58,14 @@ The statemntent:
     SELECT
         strftime('%m', order_date) AS month,
         SUM(CASE WHEN product_name = 'Ipad pro' THEN total_amount ELSE 0 END) AS Ipad_pro_total,
-        SUM(CASE WHEN product_name = 'Iphone Xs' THEN total_amount ELSE 0 END) AS Iphone_xs_total,
+        SUM(CASE WHEN product_name = 'Iphone Xs' THEN total_amount ELSE 0 END) AS Iphone_Xs_total,
         SUM(CASE WHEN product_name NOT IN ('Iphone Xs', 'Ipad pro' ) THEN total_amount ELSE 0 END) AS other_total
     FROM sales
     GROUP BY month
     ORDER BY month;
+    
+![Table_B_CASE](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/5.png)
+
 
 ### -How would the transformation change if we wanted to group the sales by week number? 
 
@@ -73,6 +80,7 @@ E.g:
     FROM sales
     GROUP BY week
     ORDER BY week;
+![Table_week](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/6.png)
 
 ### -And using the name of the month (ie. July instead of the number of the month 07 ) ?
 
@@ -89,5 +97,6 @@ Then we have the following result:
     GROUP BY month
     ORDER BY month DESC;
     
+![Table_month](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/7.png)
 
 
