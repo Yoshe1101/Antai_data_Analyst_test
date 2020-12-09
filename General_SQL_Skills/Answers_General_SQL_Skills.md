@@ -11,7 +11,7 @@ If we wanna group the amounts by months first we would need to get from the colu
            GROUP BY month;
 
     SELECT strftime('%m', order_date) AS month , 
-           SUM(total_amount) as Iphone_Xa_total  
+           SUM(total_amount) as Iphone_Xs_total  
            FROM sales WHERE product_name == 'Iphone Xs' 
            GROUP BY month;
 
@@ -22,8 +22,8 @@ If we wanna group the amounts by months first we would need to get from the colu
 
 To get the table B from this queries we can perform a left join function and replacing the 'null' values by 0 <br/> (Note: in the next steps we show how to create this TABLE B from TABLE A more efficiently with one statement)
 
-    select A.month, COALESCE (C.Ipad_pro_total, 0 ),
-           COALESCE (B.Iphone_Xa_total, 0 ), 
+    select A.month, COALESCE (C.Ipad_pro_total, 0 ) AS Ipad_pro_total,
+           COALESCE (B.Iphone_Xs_total, 0 ) AS Iphone_Xs_total , 
            A.Other_total  
            from (SELECT strftime('%m', order_date) AS month , 
                                                    SUM(total_amount) as Other_total  
