@@ -31,7 +31,7 @@ And the MSE that is the average of the square of the errors, meaning that calcul
 #### -About the plot. How do you interpret the results? Which kind of relation is shown? Is it enough to take some conclusions or do we need to perform further analysis?
 
 We can apreciate that when the price (MEDV, x$1000) decrease when the Lower Status of the population increases (LSTAT, %), meaning that the price of the houses decreases when the Status of the population decreases. 
-We can see a quite high correlation between this 2 variables (pearsons coef = -0.74), but it is true that we can not definitively conclude anything form only this data since correlation not always imply causation and further analysis would be needed, comparing data from other sources, performing experiments (A/B testing) etc.
+We can see a quite high correlation between this 2 variables (pearsons coef = -0.74), but it is true that we can not definitively conclude anything form only this data since correlation not always imply causality and further analysis would be needed, comparing data from other sources, performing experiments (A/B testing) etc.
 
 
 ![graph](https://github.com/Yoshe1101/Antai_data_Analyst_test/tree/master/General_python_Skills/img/1.png)
