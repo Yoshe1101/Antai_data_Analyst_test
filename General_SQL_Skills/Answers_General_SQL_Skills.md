@@ -80,7 +80,7 @@ E.g:
     FROM sales
     GROUP BY week
     ORDER BY week;
-![Table_week](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/6.png)
+![Table_week](https://github.com/Yoshe1101/Antai_data_Analyst_test/blob/master/General_SQL_Skills/img/6_new.png)
 
 ### -And using the name of the month (ie. July instead of the number of the month 07 ) ?
 
